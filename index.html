@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <!-- bootstrap 5-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- sweet alert -->
+    <link rel="stylesheet" href="assets/sweetAlert/sweetalert2.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- JQuery-->
+    <script src="assets/js/jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h2 class="text-white">Gestion de Personas</h2>
+            </div>
+            <div class="card-body">
+                <input type="hidden" name="idPersona" id="idPersona">
+                <div class="row">
+                    <div class="btn-group-sm">
+                        <button class="btn btn-outline-info" onclick="Consultar()"><i class="fa fa-search"></i> Consultar</button>
+                        <button class="btn btn-outline-success" id="btn-guardar" onclick="Guardar()"><i class="fa fa-save"></i> Guardar</button>
+                        <button class="btn btn-outline-primary" id="btn-modificar" onclick="Modificar()" disabled><i class="fa fa-pencil"></i> Editar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nombre">Nombre:</label>
+                        <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre" autofocus>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellidos">Apellidos:</label>
+                        <input class="form-control" type="text" name="apellidos" id="apellidos" placeholder="Apellidos">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="nacimiento">Fecha Nacimiento:</label>
+                        <input class="form-control" type="date" name="nacimiento" id="nacimiento">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="direcion">Direccion:</label>
+                        <input class="form-control" type="text" name="direcion" id="direcion" placeholder="Direccion">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="telefono">Telefono:</label>
+                        <input class="form-control" type="number" name="telefono" id="telefono" placeholder="Telefono">
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Fecha Nacimiento</th>
+                            <th>Direccion</th>
+                            <th>Telefono</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="datos"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/sweetAlert/sweetalert2.all.min.js"></script>
+    <script src="assets/js/persona.js"></script>
+</body>
+</html>
